@@ -11,3 +11,7 @@ RUN dnf install -y \
   python-websocket-client
 
 RUN pip install python-etcd==0.4.3
+
+#Install kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.1.2/bin/linux/amd64/kubectl /usr/local/bin/
+RUN chmod 755 /usr/local/bin/kubectl
